@@ -1,22 +1,24 @@
-const accountId = 144553
-let accountEmail = "hitesh@google.com"
-var accountPassword = "12345"
-accountCity = "Jaipur"
-let accountState;
+const Id = 144     // Can't be changed as const.
 
-// accountId = 2 // not allowed
+let Email = "hitesh@google.com"      // Can be changed but the variable is limited to scope of a fn block{}, so same variable can be used again in other blocks with different values without effecting each other.
+
+var Password = "12345"   // Can be changed all the time everywhere as universal scoping, so we can accidentally reuse the variable in later scripts in the same code file.
+
+City = "Jaipur"       // We can assume a variable without any declaration method but it is not a good practice.
+
+let State;     //Undefined as we have not defined it.
 
 
-accountEmail = "hc@hc.com"
-accountPassword = "21212121"
-accountCity = "Bengaluru"
 
-console.log(accountId);
+Email = "hc@hc.com"
+Password = "21212121"
+City = "Bengaluru"
+
+console.log(Id);
 
 /*
-Prefer not to use var
-because of issue in block scope and functional scope
+Prefer not to use var because of issue in block scope and functional scope
 */
 
 
-console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
+console.table([Id, Email, Password, City, State])
