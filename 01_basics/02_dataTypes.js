@@ -6,7 +6,7 @@
 // bigint
 // string => ""
 // boolean => true/false
-// null => standalone value, that comes when we set value of a variable/fn as 'null' due to explicit absence of value for a pre existing variable. eg. let f = null;console.log(f); Output: null and typeof it is object.
+// null => standalone value, that comes when we set value of a variable/fn as 'null' due to explicit absence of value for a pre existing variable. eg. let f = null;console.log(f); Output: null and Datatype of Null is object.
 // undefined => when there is no value assigned to a variable/ function has no value to log, it is undefined.
 // symbol => unique values. 
 
