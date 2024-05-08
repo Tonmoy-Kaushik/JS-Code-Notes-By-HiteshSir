@@ -1,4 +1,4 @@
-//1.
+// Digit string to number :
 
 {let score = "33"
 
@@ -10,7 +10,7 @@ let valueInNumber = Number(score)
 //console.log(valueInNumber)is 33 a number.
 }
 
-//2. 
+// Alphanumeric string to number
 
 {let score = "33abc"
 
@@ -23,6 +23,9 @@ let valueInNumber = Number(score)
 // if we convert Null to number from original type object, it will become 0.  console.log(number(Null)) is 0.
 // console.log(undefined) is undefined and converted to number, it will be NaN (not a number).
 //  Converting boolean to number : true => 1; false => 0
+
+
+//Boolean and string to number  :
 
 let isLoggedIn = 1;
 let isLoggedIn2 = "String";
@@ -82,7 +85,7 @@ let num1, num2, num3 // we can assume multiple  variables togather.
 let gameCounter = 100
 ++gameCounter; // prefix 
 gameCounter; //postfix
-console.log(gameCounter); // is 101.
+console.log(gameCounter); // is 101
 
 // link to study
 // https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
