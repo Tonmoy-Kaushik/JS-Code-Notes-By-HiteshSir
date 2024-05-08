@@ -19,4 +19,4 @@ console.log(undefined < 0); // false.  as undefined is lack of any defined value
 
 // === returns false if data types are different even if value is equal. eg. '2' and 2. So console.log("2" === 2); false.
 
-// == returns true if value is equal even if different data type. 
+// == returns true if value is equal even if different data type.
