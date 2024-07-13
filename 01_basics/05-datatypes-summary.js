@@ -32,7 +32,7 @@ const myFunction = function(){
     console.log("Hello world");
 } // function's datatype is function or also called function object.
 
-console.log(typeof anotherId);  // way to check datatype.
+console.log(typeof myFunction);  // way to check datatype.
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 

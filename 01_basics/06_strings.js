@@ -1,7 +1,7 @@
 const name = "hitesh"
 const Count = 50
 
-// console.log(name + repoCount + " Value"); concatenation of string.
+// console.log(name +   Count + " Value"); concatenation of string.
 
 console.log(`Hello my name is ${name} and my repo count is ${Count}`); //backticks and literals are used instead. String interpolation with variables in possible this way.
 
