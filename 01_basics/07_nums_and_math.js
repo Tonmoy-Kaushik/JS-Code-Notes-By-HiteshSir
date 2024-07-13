@@ -1,13 +1,13 @@
 const score = 400; //in JS we don't need to define datatype, eg. number here. 
 // console.log(score); //  Output : 400
 
-const balance = new Number(100) // but for clarification, we can us this syntax to strictly define a datatype.
+const balance = new Number(100) // but for clarification, we can us this syntax to strictly define a datatype. 
 // console.log(balance); // Output : [Number : 100]
 
 // console.log(balance.toString().length);  used to make string to check length.
 // console.log(balance.toFixed(1)); in case of decimal no. the numbers next to decimal will be rounded off to n digits, 1 here.
 
-const otherNumber = 123.8966
+const otherNumber = 123.8966 
 
 // console.log(otherNumber.toPrecision(4)); It will give us as much numbers as we need for precision. Eg. if we need just a 4 digit no. near precise to 123.8966 it is 123.9 .
 
