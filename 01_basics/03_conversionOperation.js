@@ -84,7 +84,7 @@ let num1, num2, num3 // we can assume multiple  variables togather.
 
 let gameCounter = 100
 ++gameCounter; // prefix 
-gameCounter; //postfix
+gameCounter++; //postfix
 console.log(gameCounter); // is 101
 
 // link to study
