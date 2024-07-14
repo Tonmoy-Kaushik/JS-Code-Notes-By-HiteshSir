@@ -14,7 +14,7 @@ const Arr = new Array(1, 5, 11, 4) // We can also declare an array this way.
 // Array creates shallow copies (heap memory), so two equal arrays will share same reference point and changing one will automatically effect the other one.
 
 
-// Array methods ( assume an array in console of any browser, then press enter, again write the name of the array declared and press enter to get a dropdown menu containing all the methods that can be applied to any array)
+// Array methods ( assume an array in console of any browser, then press enter, again write the name of the array declared and press enter to get a dropdown menu containing all the methods under prototype that can be applied to any array)
 
 // Arr.push(6) adds element to an existing array  *** We always write subject of the method to the left (on which operation will be done) and feed data for the operation from the right side of the method.
 
