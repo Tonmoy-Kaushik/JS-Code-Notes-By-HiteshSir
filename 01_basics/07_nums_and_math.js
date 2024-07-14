@@ -14,9 +14,14 @@ const otherNumber = 123.8966
 const hundreds = 1000000
 // console.log(hundreds.toLocaleString('en-IN')); we get commas as Indian no. system eg. 10,00,000.
 
+//Go to console of any browser, write math and tap enter, use dropdown menu to see all methods related to it.
+
+
+
+
 // +++++++++++++ Maths +++++++++++++++++++++++++++++
 
-// console.log(Math); it is a library in JavaScript that has lot of functions and values predefined.
+// console.log(Math); it is a library(object) in JavaScript that has lot of methods integrated to it and have some of the values predefined. Eg. of its methods :
 // console.log(Math.abs(-4)); absolute value is 4.
 // console.log(Math.round(4.6)); is 5
 // console.log(Math.ceil(4.2)); is 5 as ceil chooses next int.
@@ -27,6 +32,9 @@ const hundreds = 1000000
 console.log(Math.random()); // gives a random number that bigger than 0 and smaller than 1.
 console.log((Math.random()*10) + 1); // We need number from 1 to 11. Did +1 to avoid no. like 0.0012656, so 1.012656
 console.log(Math.floor(Math.random()*10) + 1); // in case we need between 1 and 10 it will floor any value bigger than 10 eg 10.232 to 10.
+
+
+//Go to console of any browser, write math and tap enter, use dropdown menu to see all methods related to it.
 
 
 // or easier in this formula.
