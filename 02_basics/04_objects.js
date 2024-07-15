@@ -82,15 +82,20 @@ console.log(instr); // here we used the short name as a variable to represent co
 
 // best way of destructuring or using a key as a variable is just write it in {}, eg {courceInstructor} to get rid of lengthy dot(.) notation with object name.
 
-// {
-//     "name": "hitesh",
-//     "coursename": "js in hindi",
-//     "price": "free"
-// }
+
+//++++++++++++++++API+++++++++++++++++++
+// API is ....  
+
+//API used to send us response (data) in XML but it does so now by JSON which are just objects. Eg.
+/* {
+     "name": "hitesh",
+     "coursename": "js in hindi",
+     "price": "free"
+ } */
 
 [
     {},
     {},
     {}
-]
+]  // JSON also exists in array format consisting objects (array is an object datatype, so same chis)
 
