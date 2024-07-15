@@ -9,18 +9,18 @@ function sayMyName(){
     console.log("H");
 }
 
-// sayMyName(); this is how we call it.
+ sayMyName(); //this is how we call it.
 
 
 
-/* lets define a function that takes arguments as input 
+// lets define a function that takes arguments as input 
 
 function addTwoNumbers(number1, number2){
 
      console.log(number1 + number2);
  }
 
-addTwoNumbers(3,4); outputs 7 in console. */
+addTwoNumbers(3,4); //outputs 7 in console. 
 
 
 
@@ -40,8 +40,7 @@ function addTwoNumbers(number1, number2){
 
 
 const result = addTwoNumbers(3, 5)
-
-// console.log("Result: ", result);
+console.log("Result: ", result);
 
 
 
@@ -63,8 +62,7 @@ function loginUserMessage(username = "sam") //default argument sam in case of no
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("hitesh"))
-
+console.log(loginUserMessage("hitesh")) // outputs : hitesh just logged in
 
 
 
@@ -76,12 +74,13 @@ function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 } // here, anyobject parameter takes objects as argument.
 
-// handleObject(user); outputs : Username is hitesh and price is 199
+handleObject(user); //outputs : Username is hitesh and price is 199
 
+//or we can also enter an object directly as argument.
 handleObject({
     username: "sam",
     price: 399
-}) //we can also enter an object directly as argument.
+}) /
 
 
 
