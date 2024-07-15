@@ -1,3 +1,4 @@
+//When we need to use a code/codeblock multiple times, we make a function of it and call it whenever needed. eg. 
 
 function sayMyName(){
     console.log("H");
@@ -8,35 +9,65 @@ function sayMyName(){
     console.log("H");
 }
 
-// sayMyName()
+// sayMyName(); this is how we call it.
 
-// function addTwoNumbers(number1, number2){
 
-//     console.log(number1 + number2);
-// }
+
+/* lets define a function that takes arguments as input 
+
+function addTwoNumbers(number1, number2){
+
+     console.log(number1 + number2);
+ }*/
+
+
+
+
+// to hold value from a function's output, we need to use return inside it.
 
 function addTwoNumbers(number1, number2){
 
     // let result = number1 + number2
     // return result
-    return number1 + number2
+    return number1 + number2  // in short
 }
+
+// once we wrote return, we can't add any more code to the same block in next lines. If we do, those lines next to the line of return will stay unresponsive.
+
+
+
 
 const result = addTwoNumbers(3, 5)
 
 // console.log("Result: ", result);
 
 
-function loginUserMessage(username = "sam"){
+
+function loginUserMessage(username)
+   {
     if(!username){
         console.log("PLease enter a username");
         return
-    }
+    } // incase of no argument is passed, to display a message instead of undefined. 
+    return `${username} just logged in`
+}
+
+
+//or 
+
+
+function loginUserMessage(username = "sam") //default argument sam in case of no argument passed.
+{
     return `${username} just logged in`
 }
 
 // console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage("hitesh"))
+
+
+
+
+
+
 
 
 function calculateCartPrice(val1, val2, ...num1){
