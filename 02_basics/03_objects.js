@@ -1,8 +1,10 @@
 // An object is singleton (unique in it's type) object when created by constructor, but not in case of making an object by literals.
 
-// 1st way to create object is via constructor method : Object.create
+// 1st way to create object is via constructor method : Object.create or new Object() 
 
 // 2nd way is via object literals, eg.
+
+const obj = {} // to declare an empty object or
 
 const JsUser = {
     name: "Hitesh",
