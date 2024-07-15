@@ -70,24 +70,28 @@ function loginUserMessage(username = "sam") //default argument sam in case of no
 
 const user = {
     username: "hitesh",
-    prices: 199
-}
-
+    prices: 199 }
+/* Let's create a function that uses values of an object by accessing them via keys*/
 function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
-}
+} // here, anyobject parameter takes objects as argument.
 
-// handleObject(user)
+// handleObject(user); outputs : Username is hitesh and price is 199
+
 handleObject({
     username: "sam",
     price: 399
-})
+}) //we can also enter an object directly as argument.
+
+
+
+
+
 
 const myNewArray = [200, 400, 100, 600]
-
 function returnSecondValue(getArray){
     return getArray[1]
-}
+} // a function that returns the 2nd value of any array, where getArray parameter takes Arrays as argument.
 
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
