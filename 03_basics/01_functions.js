@@ -18,7 +18,9 @@ function sayMyName(){
 function addTwoNumbers(number1, number2){
 
      console.log(number1 + number2);
- }*/
+ }
+
+addTwoNumbers(3,4); outputs 7 in console. */
 
 
 
@@ -27,8 +29,8 @@ function addTwoNumbers(number1, number2){
 
 function addTwoNumbers(number1, number2){
 
-    // let result = number1 + number2
-    // return result
+    // let result = number1 + number2;
+    // return result;   or do it in a single line :
     return number1 + number2  // in short
 }
 
@@ -49,7 +51,7 @@ function loginUserMessage(username)
         console.log("PLease enter a username");
         return
     } // incase of no argument is passed, to display a message instead of undefined. 
-    return `${username} just logged in`
+    return `${username} just logged in` // we donot need to use else for the case next to if.
 }
 
 
@@ -65,16 +67,6 @@ function loginUserMessage(username = "sam") //default argument sam in case of no
 
 
 
-
-
-
-
-
-function calculateCartPrice(val1, val2, ...num1){
-    return num1
-}
-
-// console.log(calculateCartPrice(200, 400, 500, 2000))
 
 const user = {
     username: "hitesh",
