@@ -1,10 +1,10 @@
 const userEmail = []
 
 if (userEmail) {
-    console.log("Got user email");
+    console.log("Got user email"); //if we input any value that is considered true, the code block will run.
 } else {
     console.log("Don't have user email");
-}
+} 
 
 // falsy values
 
