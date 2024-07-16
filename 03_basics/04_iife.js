@@ -13,5 +13,5 @@
 // IIFE in arrow functions are also the same.
 ( (name) => {
     console.log(`DB CONNECTED TWO ${name}`);
-} )('hitesh') // it can take parameters in the execution parenthesis.
+} )('hitesh') // iife can take parameters in the execution parenthesis.
 
