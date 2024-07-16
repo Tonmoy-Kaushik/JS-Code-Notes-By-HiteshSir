@@ -16,7 +16,9 @@ const Arr = new Array(1, 5, 11, 4) // We can also declare an array this way.
 
 // Array methods ( assume an array in console of any browser, then press enter, again write the name of the array declared and press enter to get a dropdown menu containing all the methods under prototype that can be applied to any array)
 
-// Arr.push(6) adds element to an existing array  *** We always write subject of the method to the left (on which operation will be done) and feed data for the operation from the right side of the method.
+// Arr.push(6) adds element to an existing array  
+
+//*** We always write subject of the method to the left (on which operation will be done) and feed data for the operation from the right side of the method.This is only in case of Array, not for the methods meant for objects.
 
 
 // Arr.push(7)

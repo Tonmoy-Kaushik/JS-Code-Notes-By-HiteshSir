@@ -51,12 +51,18 @@ const users = [
 users[1].email
 
 
+//+++++++++++++++++++++++++ Methods +++++++++++++++++++++++++++++++
+
 
 // console.log(tinderUser);
 
 // console.log(Object.keys(tinderUser)); gives an array of all keys.
 // console.log(Object.values(tinderUser)); gives an array of all values.
 // console.log(Object.entries(tinderUser)); gives an array of key value pairs as arrays.
+
+//**These methods for obj don't take input from left and any data for operation from the right, instead it takes Object ... Plain objects (created using object literals or the new Object() constructor) have a limited set of built-in methods. They don’t have keys(), values(), or entries() methods. So, Object.method(plain object input), a static method specifically designed for plain objects is used*/
+
+
 
 // console.log(tinderUser.hasOwnProperty('isLoggedIn')); True; asks if this key(property) exists.
 
