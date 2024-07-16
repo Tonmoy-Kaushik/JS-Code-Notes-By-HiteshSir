@@ -50,11 +50,11 @@ chai(); // outputs empty obj {} in case of arrow function as 'this' here will re
 /* const addTwo = (num1, num2) => {
                         return num1 + num2 }*/
 
-const addTwo = (num1, num2) =>  num1 + num2 // we can use implicit return like did here, no need to write return or braces here. ** can't use braces in case of implicit return as braces will display without return ** ** we need to use paranthesis in case we return an obj {...} as value of an arrow fn, so braces will not let us implicit return.
+const addTwo = (num1, num2) =>  num1 + num2 // we can use implicit return like did here, no need to write return or braces here. ** can't use braces in case of implicit return as braces will display without return ** ** we need to use parenthesis in case we return an obj {...} as value of an arrow fn, so braces will not let us implicit return.
 
 // const addTwo = (num1, num2) => ( num1 + num2 )
 
-const addTwo = (num1, num2) => ({username: "hitesh"}) // obj in implicit return.
+const addThree = (num1, num2) => ({username: "hitesh"}) // obj in implicit return.
 
 
 console.log(addTwo(3, 4)) // 7
