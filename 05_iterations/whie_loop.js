@@ -1,16 +1,18 @@
 
-let index = 0
-// while (index <= 10) {
-//     console.log(`Value of index is ${index}`);
-//     index = index + 2
-// }
+let i = 0
+ while (i <= 10) {
+    console.log(`Value of i is ${i}`);
+        i = i + 2 } 
+    // in while loop, we do initialization of variable at first, then the limit/condition and then the codeblock where we write the code and then finally the loop pattern. 
 
-let myArray = ['flash', "batman", "superman"]
 
-let arr = 0
-while (arr < myArray.length) {
-    //console.log(`Value is ${myArray[arr]}`);
-    arr = arr + 1
+ // lets use while loop in an array
+    let myArray = ['flash', "batman", "superman"]
+
+let indice = 0
+while (indice < myArray.length) {
+    console.log(`Value is ${myArray[indice]}`);
+    indice = indice + 1
 }
 
 let score = 11
