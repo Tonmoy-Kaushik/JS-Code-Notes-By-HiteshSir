@@ -1,4 +1,4 @@
-// for
+// for loop
 
 for (let i = 0; i <= 10; i++) {
     const element = i;
@@ -7,7 +7,7 @@ for (let i = 0; i <= 10; i++) {
     }
     //console.log(element);
     
-}
+} // in case of loops, control flow works this way : first, the loop gets a initialization point (i=0 here) and then it checks the condition (i<=10 here), i.e. if it can run the codeblock. For false condition eg. i<0, compiler exits the loop; for true condition, the code block {} runs once, then the pattern (i++ here) gets applied, and condition gets checked for new value, if true then codeblock runs again for a new value, again pattern applies and new value is checked against condition for running the loop. it continues until the new value fails to satisfy the condition. 
 
 // console.log(element);
 
@@ -19,6 +19,10 @@ for (let i = 1; i <= 10; i++) {
    }
     
 }
+
+
+
+
 let myArray = ["flash", "batman", "superman"]
 //console.log(myArray.length);
 for (let index = 0; index < myArray.length; index++) {
