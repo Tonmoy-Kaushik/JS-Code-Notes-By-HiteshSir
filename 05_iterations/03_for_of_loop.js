@@ -37,6 +37,7 @@ for (const [key, value] of map) {
 } //This is the syntax for getting key and value separately, btw we have printed them both.
 
 
+// On object, we prefer for in loop specially built for using on an obj, instead of for of loop means for array, string, map etc
 const myObject = {
     game1: 'NFS',
     game2: 'Spiderman'
@@ -45,4 +46,4 @@ const myObject = {
 // for (const [key, value] of myObject) {
 //     console.log(key, ':-', value);
     
-// } but key value pairs of object are not iterable this way.
+// } but key value pairs of object are not iterable this way.  Plain JavaScript objects are not iterable by default. The for...of loop requires an iterable object, which objects are not unless they implement the iterable protocol, which is done in  for in loop.
