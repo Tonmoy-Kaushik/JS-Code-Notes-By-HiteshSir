@@ -1,19 +1,22 @@
-// const coding = ["js", "ruby", "java", "python", "cpp"]
+// const coding = [1, 2, 3, 4, 5, 6]
+
+ /*const values = coding.forEach( (item) => {
+          console.log(item);
+     return item
+ } )
+ console.log(values);*/ //forEach can't return values like this. If we need to return specific set of values, we use array.filter() method or we use if condition to push specific values into a new array.
 
 
-// const values = coding.forEach( (item) => {
-//     //console.log(item);
-//     return item
-// } )
-
-// console.log(values);
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4
-// } )
+ const newNums = myNums.filter( (num) => {
+     return num > 4 } ) 
+     //we will hold the filtered values in newNums array.
 
+
+
+// Or we can use forEach : 
 // const newNums = []
 
 // myNums.forEach( (num) => {
