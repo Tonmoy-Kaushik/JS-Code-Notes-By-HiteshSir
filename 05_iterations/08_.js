@@ -4,8 +4,8 @@ const Arr = [1, 2, 3]
 
 // const ArrTotal = Arr.reduce(function (sum, element) {
 //     console.log(`sum: ${sum} and element: ${element}`);  to print steps of addition inside.
-//     return sum + elemnt
-// }, 0)
+//     return sum + element
+// }, 0) 
 
 
 
