@@ -27,7 +27,7 @@
     }
     addOptiLanguage('golang')
 
-    //Edit
+    //Edit or replace elements
     const secondLang = document.querySelector("li:nth-child(2)")
     console.log(secondLang);
     //secondLang.innerHTML = "Mojo"
@@ -35,11 +35,11 @@
     newli.textContent = "Mojo"
     secondLang.replaceWith(newli)
 
-    //edit
+    //edit   short
     const firstLang = document.querySelector("li:first-child")
     firstLang.outerHTML = '<li>TypeScript</li>'
 
-    //remove
+    //remove elements
     const lastLang = document.querySelector('li:last-child')
     lastLang.remove()
 
