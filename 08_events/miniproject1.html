@@ -1,5 +1,21 @@
 // Async basic theory class : https://www.youtube.com/watch?v=zgt5oTD3rRc&t=1029s
 
+// JS is a synchronous and single threaded language. So codes get executed one by one in a single thread. JS engine is hence made in runtime environment of browser or node (eg. vs code) for doing asynchronous multi threaded operation.
+There are two type of codes :  1. Blocking Codes (blocks flow to wait for acquiring data from a function that is deployed to get any response from an api or reading a file ) and 2. Non blocking code (flow doesn't stop even if a fn is taking time to acquire data, other work keep on running in a asynchronous manner and it shows a multi thread behavior. This is achieved by using callback functions, promises, and async/await syntax.).
+
+
+Blocking code, also known as synchronous code, is called synchronous because it executes in a linear, sequential manner. When a blocking code is running, the JavaScript engine cannot start another task until the first one is completed. This is because the engine is "synchronized" with the execution of the blocking code, meaning it waits for the code to finish before moving on to the next task.
+
+In the context of JavaScript, synchronous code is often used for simple, quick tasks that don't require waiting for external resources, such as reading local variables or performing simple arithmetic operations.
+
+Non-blocking code, on the other hand, is asynchronous. It allows the JavaScript engine to start another task while waiting for a response from an API or a file read operation. This is achieved by using callback functions, promises, or async/await syntax. Non-blocking code does not "sync" with the execution of the task it's waiting for. Instead, it continues executing other tasks in the meantime, giving the illusion of multi-threaded behavior.
+
+In the provided code snippet, the setTimeout function is an example of a non-blocking code. It schedules a function to be executed after a specified delay, allowing the program to continue executing other tasks in the meantime.
+
+ 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
