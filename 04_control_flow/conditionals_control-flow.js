@@ -1,3 +1,6 @@
+// learn about code execution and call stack and control flow (theory class) : https://www.youtube.com/watch?v=ByhtOgF6uYM
+
+
 // Use of conditional operators in if function
 const isUserloggedIn = true
 const temperature = 41

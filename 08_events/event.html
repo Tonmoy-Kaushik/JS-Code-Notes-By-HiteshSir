@@ -72,19 +72,20 @@
     // }, false)  So on clicking, this message will get displayed instead.
    
     
+    // lets make  code that upon clicking any image, it gets vanished/removed.
     document.querySelector('#images').addEventListener('click', function(e){
-        if (e.target.tagName === 'IMG') { // to make sure that we click on <img> or image, not <li>s; do console.log(e.target.id); too check where we clicked.
+        if (e.target.tagName === 'IMG') { // to make sure that we click on <img> or image, not <li>s, because we got to remove parent li of image clicked, not ul who is parent of li. Add console.log(e.target.id); too check where we clicked.
             let x = e.target.parentNode // to remove the li that is parent of img.
             x.remove()
         }
-    })
+    }) // we have selected ul with id "images", so that upon clicking images bearing img tag, it will be removed. 
     
     //removeIt.parentNode.removeChild(removeIt) could have done this too.
 
 </script>
 </html>
 
-
+ 
 
 
 
