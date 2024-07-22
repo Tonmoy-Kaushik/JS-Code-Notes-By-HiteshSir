@@ -19,45 +19,84 @@
    </div>
 </body>
 <script>
+    // Adding click event to an HTML image element without addEventListener fn :
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
-    // }
+    // }   
+    // Adding event by addEventListener fn :
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    // }, false)
 
-     // attachEvent()
-    // jQuery - on
+    // Event Propagation :  The 3rd parameter in an event listener which controls event propagation with help of true and false, where false means bubbling (the event goes outward) and true means capture (the event goes inward), i.e. in case of two events one on current level (children) and one on parent level, as clicking the child will trigger both events (bcz child element is a part of parent), in case of bubbling, current (child) event will executed first and then parent event that was in outer layer, so event propagated from inner to outer layer. but in case of capture, outer layer event or parent event will come first and then the(child) event. 
 
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
-
+    //To understand event propagation, let us consider two click events, one on parent <ul> of id #images and another on child <li> of id #owl.
+    //When we will click on owl, same click will be considered as a click on parent <ul> images and it's child <li> owl as well.       
+    
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
     // }, false)
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
     // }, false)
+
+    /* clicking on owl will result in : 
+    1. owl clicked
+    2. clicked inside the ul
+    as we kept it false or bubbling so event executes/propagates outwards, true or capture will result in
+    1. clicked inside ul
+    2. owl clicked
+    as now event is propagating inward.
+    */
     
+    // using e.stopPropagation() stops the propagation of event, so clicking on a child will not trigger outer level events applied on parent, even if a child is part of the element. eg.
+    
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+     }, false)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        e.stopPropagation()
+     }, false) // here, clicking on owl will only trigger it and there will be no propagation or no clicks registered on parent #images.
+
+
+    // e is called event object that represents the event. It has a lot of methods that gives different information and performs different tasks. #Described at the end.
+
+
+    // e.preventDefault() is a method that prevents default behavior of a event and does something else that we want. eg. the #google element containing a link to google, but we want to display a message instead of opening the link whenever we click on the link, eg.
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
+    //     e.preventDefault(); prevents opening link when clicked.
+    //     e.stopPropagation() prevents triggering of outer layer events of parent.
     //     console.log("google clicked");
-    // }, false)
+    // }, false)  So on clicking, this message will get displayed instead.
    
     
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
+        if (e.target.tagName === 'IMG') { // to make sure that we click on <img> or image, not <li>s; do console.log(e.target.id); too check where we clicked.
+            let x = e.target.parentNode // to remove the li that is parent of img.
+            x.remove()
         }
-    
-        
     })
     
-    //removeIt.parentNode.removeChild(removeIt)
+    //removeIt.parentNode.removeChild(removeIt) could have done this too.
+
 </script>
 </html>
+
+
+
+
+
+    
+    //Older syntax for event
+    // attachEvent()
+    // jQuery - on
+
+
+    // Event fns to study for interview & project :
+    // type, timestamp, defaultPrevented 
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
