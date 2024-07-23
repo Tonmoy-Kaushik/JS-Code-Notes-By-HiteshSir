@@ -15,13 +15,19 @@ In the provided code snippet, the setTimeout function is an example of a non-blo
  
 JS engine : It is basically Memory Heap integrated with Call Stack made to run JS codes. It is single threaded bcz of one call stack.
 
-Alongside the JS engine, it is normally binded with WEB API of a browser ( Where DOM, called DOM Api, is found. That's why front-end/HTML codes are rendered in a browser) or with a node environment ( like in VS code after installing node env., we run JS in that, but it lacks DOM, so we render HTML in browser). Another important component beside that is Task Queue that makes asynchronous multi threaded tasks possible and a promise queue or also called high priority queue for similar anysc but important tasks.
+Alongside the JS engine, it is normally binded with WEB API of a browser ( Where DOM, called DOM Api, is found. That's why front-end/HTML codes are rendered in a browser) or with a node environment ( like in VS code after installing node env., we run JS in that, but it lacks DOM, so we render HTML in browser). Another important component beside that is Task Queue that makes asynchronous multi threaded tasks possible and a promise queue or also called high priority queue under fetch API for similar anysc but important tasks.
+
 For normal tasks, simply task queue is used to get them done one by one.
 But in case of asynchronous tasks, let's say a code that has 'set timeout()'
 it will go to callstack and will be sent to a register (call register) to send it to task queue. Task queue is where async codes are kept in queue to be send back to callstack.
 
 
-
+Let we are executing functions in call stack. We did 
+<Script> 
+setTimeout(function(){console.log(1)}, 0);
+console.log(2);
+</Script>
+So even if time is 0, still the fn will be sent to task queue and until it coms back to call stack, next function/code will be executed. So output will be 2 and then 1.
 
 <!DOCTYPE html>
 <html lang="en">
