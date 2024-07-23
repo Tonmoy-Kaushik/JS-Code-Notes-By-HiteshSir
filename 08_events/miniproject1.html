@@ -13,6 +13,13 @@ Non-blocking code, on the other hand, is asynchronous. It allows the JavaScript 
 In the provided code snippet, the setTimeout function is an example of a non-blocking code. It schedules a function to be executed after a specified delay, allowing the program to continue executing other tasks in the meantime.
 
  
+JS engine : It is basically Memory Heap integrated with Call Stack made to run JS codes. It is single threaded bcz of one call stack.
+
+Alongside the JS engine, it is normally binded with WEB API of a browser ( Where DOM, called DOM Api, is found. That's why front-end/HTML codes are rendered in a browser) or with a node environment ( like in VS code after installing node env., we run JS in that, but it lacks DOM, so we render HTML in browser). Another important component beside that is Task Queue that makes asynchronous multi threaded tasks possible and a promise queue or also called high priority queue for similar anysc but important tasks.
+For normal tasks, simply task queue is used to get them done one by one.
+But in case of asynchronous tasks, let's say a code that has 'set timeout()'
+it will go to callstack and will be sent to a register (call register) to send it to task queue. Task queue is where async codes are kept in queue to be send back to callstack.
+
 
 
 
