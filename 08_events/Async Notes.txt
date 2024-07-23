@@ -1,0 +1,32 @@
+// Async basic theory class : https://www.youtube.com/watch?v=zgt5oTD3rRc&t=1029s
+
+// JS is a synchronous and single threaded language. So codes get executed one by one in a single thread. JS engine is hence made in runtime environment of browser or node (eg. vs code) for doing asynchronous multi threaded operation.
+There are two type of codes :  1. Blocking Codes (blocks flow to wait for acquiring data from a function that is deployed to get any response from an api or reading a file ) and 2. Non blocking code (flow doesn't stop even if a fn is taking time to acquire data, other work keep on running in a asynchronous manner and it shows a multi thread behavior. This is achieved by using callback functions, promises, and async/await syntax.).
+
+
+Blocking code, also known as synchronous code, is called synchronous because it executes in a linear, sequential manner. When a blocking code is running, the JavaScript engine cannot start another task until the first one is completed. This is because the engine is "synchronized" with the execution of the blocking code, meaning it waits for the code to finish before moving on to the next task.
+
+In the context of JavaScript, synchronous code is often used for simple, quick tasks that don't require waiting for external resources, such as reading local variables or performing simple arithmetic operations.
+
+Non-blocking code, on the other hand, is asynchronous. It allows the JavaScript engine to start another task while waiting for a response from an API or a file read operation. This is achieved by using callback functions, promises, or async/await syntax. Non-blocking code does not "sync" with the execution of the task it's waiting for. Instead, it continues executing other tasks in the meantime, giving the illusion of multi-threaded behavior.
+
+In the provided code snippet, the setTimeout function is an example of a non-blocking code. It schedules a function to be executed after a specified delay, allowing the program to continue executing other tasks in the meantime.
+
+ 
+JS engine : It is basically Memory Heap integrated with Call Stack made to run JS codes. It is single threaded bcz of one call stack.
+
+Alongside the JS engine, it is normally binded with WEB API of a browser ( Where DOM, called DOM Api, is found. That's why front-end/HTML codes are rendered in a browser) or with a node environment ( like in VS code after installing node env., we run JS in that, but it lacks DOM, so we render HTML in browser). Another important component beside that is Task Queue that makes asynchronous multi threaded tasks possible and a promise queue or also called high priority queue under fetch API for similar anysc but important tasks.
+
+For normal tasks, simply task queue is used to get them done one by one.
+But in case of asynchronous tasks, let's say a code that has 'set timeout()'
+it will go to callstack and will be sent to a register (call register) to send it to task queue. Task queue is where async codes are kept in queue to be send back to callstack.
+
+
+Let we are executing functions in call stack. We did 
+
+<Script> 
+setTimeout(function(){console.log(1)}, 0);
+console.log(2);
+</Script>
+
+So even if time is 0, still the fn will be sent to task queue and until it coms back to call stack, next function/code will be executed. So output will be 2 and then 1.
