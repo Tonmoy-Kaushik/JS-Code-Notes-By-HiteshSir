@@ -29,4 +29,4 @@ setTimeout(function(){console.log(1)}, 0);
 console.log(2);
 </Script>
 
-So even if time is 0, still the fn will be sent to task queue and until it coms back to call stack, next function/code will be executed. So output will be 2 and then 1.
+So even if time is 0, still the fn will be sent to task queue and until it comes back to call stack, next function/code will be executed. So output will be 2 and then 1.
