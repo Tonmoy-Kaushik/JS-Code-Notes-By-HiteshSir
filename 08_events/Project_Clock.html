@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+  <div style = "display:grid; place-items:center; font-size: larger;">
+    <h1 style="transform:scale(1.5);"> CLOCK </h1>
+    <br /><br />
+    <span id = 'time' style='border: solid black 1px; padding: 5px 40px; transform:scale(1.5);' >Time</span>
+    <br /><br />
+    <button id="start" style="transform:scale(1.5);">Start</button>
+    <br /><br />
+    <button id="stop" style="transform:scale(1.5);">Stop</button>
+    </div>
+</body>
+
+<script>
+			
+			let Time = function () {document.querySelector('#time').innerHTML = new Date().toLocaleTimeString();};
+			
+			let intervalId;
+
+   	document.querySelector('#start').addEventListener('click', function()
+			{intervalId = setInterval(Time, 1000)})
+
+			document.querySelector('#stop').addEventListener('click', function()
+			{clearInterval(intervalId)})
+
+    
+</script>
+</html>
