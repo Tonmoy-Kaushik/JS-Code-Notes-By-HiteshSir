@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Chai aur Javascript</h1>
+    <span id = 'time'> </span>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
+
 <script>
-    const sayDate = function(){
-        console.log(Date.now());
-    }
+			
+			let Time = function () {document.querySelector('#time').innerHTML = Date.now()};
+			
+			let intervalId;
 
-    const intervalId = setInterval(sayDate, 1000, "hi")
+   	document.querySelector('#start').addEventListener('click', function()
+			{intervalId = setInterval(Time, 1000)})
 
-    clearInterval(intervalId)
+			document.querySelector('#stop').addEventListener('click', function()
+			{clearInterval(intervalId)})
+
+    
 </script>
 </html>
