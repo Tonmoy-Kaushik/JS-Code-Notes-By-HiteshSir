@@ -23,10 +23,12 @@
 			let intervalId;
 
    	document.querySelector('#start').addEventListener('click', function()
-			{intervalId = setInterval(Time, 1000)})
+			{ if(!intervalId){intervalId = setInterval(Time, 1000)}})
 
 			document.querySelector('#stop').addEventListener('click', function()
-			{clearInterval(intervalId)})
+			{clearInterval(intervalId)
+        intervalId = null}) // Added to stop the clock when the button is clicked again.
+      
 
     
 </script>
