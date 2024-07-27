@@ -14,13 +14,15 @@
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
+    
+    const xhr = new XMLHttpRequest(); //creating a XMLHttpRequest against which we will seek data/responsedata from an URL.
+    
+    xhr.open('GET', requestUrl) //seeking responsedata.
+    
     xhr.onreadystatechange = function(){
         //console.log(xhr.readyState); will show us readystate.
         if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            //console.log(typeof data); Data type will be Obj. now.
+            const data = JSON.parse(this.responseText) //Data type will be Obj. now.
             console.log(data.followers);
         }
     }
