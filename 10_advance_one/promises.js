@@ -11,9 +11,8 @@ get data or fails, and that seccess or failure decides our next set of codes to 
 to display one, the resultant dataset depends on any async task's response being true or false, so we gotta print one set of data based on that.*/
  
 /* Syntax : we write a callback fn inside Promise(). The fn has methods named resolve & reject as parameters and inside codeblock that sends response/values to 
-then() or catch() respectively, inside then() we use any asynchronous method under which the callback function can have two results  success/true that represents
-resolve,
- */
+then() or catch() respectively, ...doubtful...inside then() we use any asynchronous method under which the callback function can have two results  success/true 
+that represents resolve .. ehh it can get rejected too, why to write inside resolve? */
 
 promiseOne.then(function(){
     console.log("Promise consumed");
