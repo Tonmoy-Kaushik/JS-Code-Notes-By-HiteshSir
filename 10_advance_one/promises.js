@@ -3,19 +3,29 @@ const promiseOne = new Promise(function(resolve, reject){
     // DB calls, cryptography, network
     setTimeout(function(){
         console.log('Async task is compelete');
-        resolve()
+        resolve();// can't write ; after console.log() bcz it is inside a method() not in a block{}, so code will end unexpectedly.
     }, 1000)
-}) // Syntax is we write a callback fn inside Promise(). The fn has resolve & reject as parameters and inside codeblock, we we use any asynchronous method under which the callback function can have two results, one of task is done
-/* We use async's promise syntax when we depend on result from a server and we don't know what it will be. Eg. If the callback fn made to fetch data succeed to get data or fails, or 
-a code where we have two set of data(eg. Promise Four or five) but to display one, the resultant dataset depends on any async task's response being true or false, so we gotta print one set of data based on that.*/
+})
+/* We use async's promise syntax when we depend on result from a server and we don't know what it will be. Eg. If the callback fn made to fetch data succeed to 
+get data or fails, and that seccess or failure decides our next set of codes to be run ; or a code where we have two set of data(eg. Promise Four or five) but 
+to display one, the resultant dataset depends on any async task's response being true or false, so we gotta print one set of data based on that.*/
+ 
+/* Syntax : we write a callback fn inside Promise(). The fn has methods named resolve & reject as parameters and inside codeblock that sends response/values to 
+then() or catch() respectively, inside then() we use any asynchronous method under which the callback function can have two results  success/true that represents
+resolve,
+ */
+
 promiseOne.then(function(){
     console.log("Promise consumed");
 })
 
 new Promise(function(resolve, reject){
     setTimeout(function(){
+        /*resolve(console.log("Async task 2")); can't do this as if we write our fn inside resolve() and incase fn fails to provide response, then practically it 
+        should have been inide or along with reject(),, check how to write the syntax where there is a callback that has both possibilities for response and we 
+        gotta write reject and also resolve, this will answer how actually syntax is written for a fn that can have any of the 2 values */
         console.log("Async task 2");
-        resolve()
+        resolve();
     }, 1000)
 
 }).then(function(){
