@@ -5,8 +5,9 @@ const promiseOne = new Promise(function(resolve, reject){
         console.log('Async task is compelete');
         resolve()
     }, 1000)
-})
-
+}) // Syntax is we write a callback fn inside Promise(). The fn has resolve & reject as parameters and inside codeblock, we we use any asynchronous method under which the callback function can have two results, one of task is done
+/* We use async's promise syntax when we depend on result from a server and we don't know what it will be. Eg. If the callback fn made to fetch data succeed to get data or fails, or 
+a code where we have two set of data but to display one, the resultant dataset depends on any async task's response being true or false, so we gotta print one set of data based on that.*/
 promiseOne.then(function(){
     console.log("Promise consumed");
 })
