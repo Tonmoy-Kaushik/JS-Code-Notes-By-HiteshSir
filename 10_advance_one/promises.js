@@ -1,9 +1,9 @@
 const promiseOne = new Promise(function(resolve, reject){
     //Do an async task
     // DB calls, cryptography, network
-    setTimeout(function(){
+    const response = setTimeout(function(){
         console.log('Async task is compelete');
-        resolve();// can't write ; after console.log() bcz it is inside a method() not in a block{}, so code will end unexpectedly.
+         
     }, 1000)
 })
 /* We use async's promise syntax when we depend on result from a server and we don't know what it will be. Eg. If the callback fn made to fetch data succeed to 
@@ -109,3 +109,6 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
+
+
+// eg. in case of method(console.log(...)); can't write ; after console.log() bcz it is inside a method() not in a block{}, so code will end unexpectedly.
