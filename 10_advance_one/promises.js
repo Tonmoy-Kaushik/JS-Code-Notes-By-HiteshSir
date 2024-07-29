@@ -160,7 +160,7 @@ consumePromiseFive(); // need to call it as it is a fn.
      try {
          const response = await fetch('https:jsonplaceholder.typicode.comusers')
 
-         const data = await response.json()
+         const data = await response.json() // converts to json
          console.log(data);
      } catch (error) {
          console.log("E: ", error);
@@ -173,7 +173,7 @@ getAllUsers();
 
 fetch('https://api.github.com/users/hiteshchoudhary')
 .then((response) => {
-    return response.json()
+    return response.json() // converts to json.
 })
 .then((data) => { 
     console.log(data);
