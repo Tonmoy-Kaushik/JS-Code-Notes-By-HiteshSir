@@ -29,3 +29,49 @@
     const app = new React()
 </script>
 </html>
+
+
+The reason why the code doesn't work as expected without `.bind(this)` is due to how the `this` keyword behaves in JavaScript, particularly when used in class methods that are passed as callbacks.
+
+### Understanding `this` in JavaScript:
+
+1. **Class Methods and `this`**:
+   - When you define a method inside a JavaScript class (like `handleClick`), the `this` keyword refers to the instance of the class when you call the method directly (e.g., `app.handleClick()`).
+   - However, when you pass that method as a callback (e.g., to an event listener), the context of `this` can change depending on how the callback is invoked.
+
+2. **Event Listeners and `this`**:
+   - In the case of an event listener, when you pass a method reference like `this.handleClick` without binding, the method is invoked with a different context. Specifically, in this case, `this` will refer to the HTML element that the event is bound to (the button) rather than the instance of the `React` class.
+   - Since the button element doesn't have a `server` property, trying to access `this.server` in `handleClick` will result in `undefined`, or it might throw an error in strict mode.
+
+### Role of `.bind(this)`:
+
+- The `.bind(this)` method creates a new function where `this` is explicitly bound to the instance of the `React` class, regardless of how the function is invoked. This ensures that when `handleClick` is called as a callback, `this` will correctly refer to the class instance, allowing access to class properties like `this.server`.
+
+### Example without `.bind(this)`:
+If you remove `.bind(this)`:
+```javascript
+document.querySelector('button').addEventListener('click', this.handleClick);
+```
+- When the button is clicked, `this.handleClick` is called with `this` pointing to the button element, not the `React` instance. As a result, `console.log(this.server)` will log `undefined` or throw an error.
+
+### Example with `.bind(this)`:
+With `.bind(this)`:
+```javascript
+document.querySelector('button').addEventListener('click', this.handleClick.bind(this));
+```
+- Now, `this` inside `handleClick` will correctly refer to the `React` instance, and `this.server` will correctly log `"https://localhost:300"`.
+
+### Alternative Approach - Arrow Functions:
+
+Another way to solve this issue is to define `handleClick` as an arrow function:
+```javascript
+handleClick = () => {
+    console.log("button clicked");
+    console.log(this.server);
+}
+```
+- Arrow functions don't have their own `this` context; they inherit it from the enclosing scope, which in this case would be the `React` class instance. This ensures that `this` will always refer to the instance of the class.
+
+**Suggestion for Next Steps**:
+- **a.** Experiment with removing `.bind(this)` and observe how `this` changes in the console logs.
+- **b.** Consider refactoring the code to use an arrow function if you want to avoid using `.bind(this)`.
