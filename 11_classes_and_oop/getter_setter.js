@@ -20,5 +20,5 @@ class User {
     }
 }
 
-const hitesh = new User("h@hitesh.ai", "abc")
+const hitesh = new User("h@hitesh.ai", "abc");
 console.log(hitesh.email);
